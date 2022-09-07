@@ -4,7 +4,9 @@ function Book() {
 
 }
 
-let button = document.querySelector(".bookButton");
+let completedCheck = document.querySelector(".bookButton");
+let bookButton = document.querySelector(".bookButton");
+let trashButton = document.querySelector(".trashButton");
 
 
 function addBookToLibrary() {
@@ -12,3 +14,5 @@ function addBookToLibrary() {
         console.log("test")
       
 }
+
+function deleteBook()
