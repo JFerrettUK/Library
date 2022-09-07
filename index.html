@@ -22,6 +22,22 @@
             <div class="buttonContainer">
                 <button class="bookButton" role="button" onclick="addBookToLibrary()">New book</button>
             </div>
+            <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                    <div class="formSection1">
+                        <label for="author">Author: </label>
+                        <input type="text" name="author" placeholder="Enter author">
+                     </div>
+                     <div class="formSection2">
+                        <label for="title">Title: </label>
+                        <input type="text" name="title" placeholder="Enter book title">
+                    </div>
+                    <div class="formSection3">
+                        <label for="pgNo">Number of pages: </label>
+                        <input type="number" name="pgNo" placeholder="Enter page number">
+                    </div>
+                </form>
+            </div>
             <div class="cards">
                 <div class="card">
                     <div class="cardColumnLeft"></div>
