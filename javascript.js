@@ -5,15 +5,22 @@ let trashButton = document.querySelector(".trashButton");
 let myLibrary = [];
 
 function openForm() {
-        document.getElementById("myForm").style.display = "block";
-      }
+        if (newBook = "none") {
+                document.getElementById("myForm").style.display = "grid";
+        } else {
+                document.getElementById("myForm").style.display = "block";
+        }
+}
 
-      function openForm() {
-        document.getElementById("myForm").style.display = "none";
-      }
-
-
-      
+function closeform() {
+        if (newBook = "grid") {
+                document.getElementById("myForm").style.display = "none";
+        } else {
+                document.getElementById("myForm").style.display = "grid";
+        }
+}
+             
+              
 
 function book() {
         title: new titleInput;

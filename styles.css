@@ -75,9 +75,8 @@ body, html {
               text-align: center;
               text-decoration: none;
               transition: all .3s;
-              user-select: none;
-              -webkit-user-select: none;
               touch-action: manipulation;
+              border-radius: 3px;
             }
             
             .bookButton:focus {
@@ -102,15 +101,93 @@ body, html {
               }
             }
 
-        .form-container {
-            height: 120px;
-            padding: 10px;
-            display: grid;
-            align-content: center;
-            background-color: #ffffff;
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-            border-radius: 5px;
-        }
+            .form-popup {
+                display: none;
+                position:relative;
+                margin-top: 20px;
+                justify-content: center;
+              }            
+
+                .closeButton {
+                    display: block;
+                    position: absolute;
+                    height: 25px;
+                    left: 290px;
+                    top: 5px;
+                }
+
+                .form-container {
+                    height: 135px;
+                    width: 248px;
+                    padding: 10px;
+                    display: grid;
+                    align-items: center;
+                    align-content: center;
+                    background-color: #ffffff;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                    border-radius: 5px;
+                    gap: 5px;
+                    font-size: 11px;
+                }
+
+                    .legend {
+                        font-weight: bold;
+                    }
+
+                    .authorSection, .titleSection, .pgNoSection, .completeBoxSection {
+                        display: flex;
+                        align-items: center;
+                        align-content: center;
+                        gap: 5px;
+                    }
+
+                    input {
+                        font-size: 11px;
+                    }
+
+                    .submitContainer {
+                        display: grid;
+                        justify-content: center;
+                    }
+
+                    .submitButton {
+                        align-items: center;
+                        background-color: #fff;
+                        border: 2px solid #143c79;
+                        box-sizing: border-box;
+                        color: #143c79;
+                        display: inline-flex;
+                        fill: #143c79;
+                        font-family: Inter,sans-serif;
+                        font-weight: 600;
+                        height: 28px;
+                        justify-content: center;
+                        padding: 0 17px;
+                        text-align: center;
+                        text-decoration: none;
+                        transition: all .3s;
+                        user-select: none;
+                        -webkit-user-select: none;
+                        touch-action: manipulation;
+                        border-radius: 3px;
+                    }
+
+                    .submitButton:focus {
+                        color: #143c79;
+                    }
+                      
+                      .submitButton:hover {
+                        border-color: #548fd3;
+                        color: #548fd3;
+                        fill: #548fd3;
+                    }
+                      
+                    .submitButton:active {
+                      background-color: #548fd3;
+                      color: #548fd3;
+                      fill: #548fd3;
+                    }   
+
         .cards {
             display: grid;
             align-content: flex-start;
