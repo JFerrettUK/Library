@@ -1,32 +1,32 @@
 let completedCheck = document.querySelector(".bookButton");
 let bookButton = document.querySelector(".bookButton");
 let trashButton = document.querySelector(".trashButton");
-
-let myLibrary = [];
+let submitButton = document.querySelector(".submitButton");
 
 function openForm() {
-        if (newBook = "none") {
-                document.getElementById("myForm").style.display = "grid";
-        } else {
-                document.getElementById("myForm").style.display = "block";
-        }
+        document.getElementById("myForm").style.display = "grid";
 }
 
 function closeform() {
-        if (newBook = "grid") {
-                document.getElementById("myForm").style.display = "none";
-        } else {
-                document.getElementById("myForm").style.display = "grid";
-        }
+        document.getElementById("myForm").style.display = "none";
 }
-             
-              
 
-function book() {
-        title: new titleInput;
-        author: new authorInput;
-        totalPages: new totalPagesInput;
-        completed: new completedTorF;        
+
+let myForm = document.getElementById("myForm")
+myForm.addEventListener("submit", (e) => {
+        console.log("Form has been submitted")
+        e.preventDefault();
+});
+
+
+
+let myLibrary = [];
+
+function book(title, author, pages, isRead) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.isRead = isRead;
 }
 
 function addBookToLibrary() {

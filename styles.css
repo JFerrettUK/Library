@@ -25,7 +25,8 @@ body, html {
             font-size: 34px;
             font-weight: bold;
             color: #143c79;
-            width: 180px;
+            letter-spacing: -.8px;
+            width: 185px;
         }
 
         .logoText {
@@ -108,16 +109,22 @@ body, html {
                 justify-content: center;
               }            
 
-                .closeButton {
-                    display: block;
-                    position: absolute;
-                    height: 25px;
-                    left: 290px;
-                    top: 5px;
+                .legend {
+                    font-weight: bold;
+                    margin-top: -10px;
+                    height: 20px;
                 }
 
+                    .closeButton {
+                        display: grid;
+                        position: relative;
+                        height: 20px;
+                        left: 230px;
+                        bottom: 28px;
+                    }
+
                 .form-container {
-                    height: 135px;
+                    height: 165px;
                     width: 248px;
                     padding: 10px;
                     display: grid;
@@ -130,15 +137,16 @@ body, html {
                     font-size: 11px;
                 }
 
-                    .legend {
-                        font-weight: bold;
-                    }
-
                     .authorSection, .titleSection, .pgNoSection, .completeBoxSection {
                         display: flex;
                         align-items: center;
                         align-content: center;
                         gap: 5px;
+                        justify-content: space-between;
+                    }
+
+                    .titleInput {
+                        width: 208px;;
                     }
 
                     input {
@@ -170,6 +178,7 @@ body, html {
                         -webkit-user-select: none;
                         touch-action: manipulation;
                         border-radius: 3px;
+                        margin-bottom: -10px;
                     }
 
                     .submitButton:focus {

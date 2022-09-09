@@ -19,36 +19,50 @@
             </div>
         </div>
         <div class="content">
+            
+            <!-- A button which expands and allows someone to add a book -->
+
+
             <div class="buttonContainer">
                 <button class="bookButton" role="button" onclick="openForm()">New book</button>
             </div>
             <div class="form-popup" id="myForm">
 
+            <!-- Card HTML to hold each book -->
+
+
                 <form class="form-container">
+                    <div class="legend">Book details:
+
                     <svg xmlns="http://www.w3.org/2000/svg" class="closeButton" onclick="closeform()" viewBox="0 0 512 512"><title>Close Circle</title><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill="none" stroke="#143c79" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="#143c79" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M320 320L192 192M192 320l128-128"/></svg>
-                    <div class="legend">Book details:</div>
+
+                    </div>
 
                     <div class="authorSection">
                         <label for="author">Author: </label>
-                        <input type="text" name="author" placeholder="Enter author">
+                        <input type="text" size="28.6" name="author" placeholder="Enter author">
                      </div>
                      <div class="titleSection">
                         <label for="title">Title: </label>
-                        <input type="text" name="title" placeholder="Enter book title">
+                        <input type="text" name="title" class="titleInput" placeholder="Enter book title">
                     </div>
                     <div class="pgNoSection">
                         <label for="pgNo">Number of pages: </label>
-                        <input type="number" name="pgNo" placeholder="Enter page number">
+                        <input type="number" name="pgNo" placeholder="Enter number of pages">
                     </div>
                     <div class="completeBoxSection">
                         <label for="completeBox">Completed? </label>
                         <input type="checkbox" class="checkBox" name="completeBox" style="margin: 0;">
                     </div>
                     <div class="submitContainer">
-                        <input type="submit" value="Submit" class="submitButton" onclick="addBookToLibrary()">
+                        <!-- onclick="addBookToLibrary() -->
+                        <input type="submit" value="Submit" class="submitButton">
                     </div>
                 </form>
             </div>
+
+            <!-- HTML for the card insertions below -->
+
             <div class="cards">
                 <div class="card">
                     <div class="cardColumnLeft"></div>
@@ -69,6 +83,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
