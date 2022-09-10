@@ -103,7 +103,7 @@ body, html {
             }
 
             .form-popup {
-                display: none;
+                display: grid;
                 position:relative;
                 margin-top: 20px;
                 justify-content: center;

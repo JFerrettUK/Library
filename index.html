@@ -40,23 +40,23 @@
 
                     <div class="authorSection">
                         <label for="author">Author: </label>
-                        <input type="text" size="28.6" name="author" placeholder="Enter author">
+                        <input type="text" size="28.6" name="author" placeholder="Enter author" id="authorInput">
                      </div>
                      <div class="titleSection">
                         <label for="title">Title: </label>
-                        <input type="text" name="title" class="titleInput" placeholder="Enter book title">
+                        <input type="text" name="title" class="titleInput" placeholder="Enter book title" id="titleInput">
                     </div>
                     <div class="pgNoSection">
                         <label for="pgNo">Number of pages: </label>
-                        <input type="number" name="pgNo" placeholder="Enter number of pages">
+                        <input type="number" name="pgNo" placeholder="Enter number of pages" id="pgNoInput">
                     </div>
                     <div class="completeBoxSection">
                         <label for="completeBox">Completed? </label>
-                        <input type="checkbox" class="checkBox" name="completeBox" style="margin: 0;">
+                        <input type="checkbox" class="checkBox" name="completeBox" style="margin: 0;" id="completedInput" value="on">
                     </div>
                     <div class="submitContainer">
-                        <!-- onclick="addBookToLibrary() -->
-                        <input type="submit" value="Submit" class="submitButton">
+                        
+                        <input type="submit" value="Submit" class="submitButton" onclick="addBookToLibrary()">
                     </div>
                 </form>
             </div>

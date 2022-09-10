@@ -19,8 +19,27 @@ myForm.addEventListener("submit", (e) => {
 });
 
 
+// function book(title, author, pages, isRead) {
+//         bookCard.title = title;
+//         bookCard.author = author;
+//         bookCard.pages = pages;
+//         bookCard.isRead = isRead;
+//         console.log(bookCard)
+//         return bookCard;
+// }
+
 
 let myLibrary = [];
+
+
+// function book(title, author, pages, isRead) {
+//         bookCard.title = title;
+//         bookCard.author = author;
+//         bookCard.pages = pages;
+//         bookCard.isRead = isRead;
+//         console.log(bookCard);
+//         return bookCard;
+// }
 
 function book(title, author, pages, isRead) {
         this.title = title;
@@ -30,9 +49,14 @@ function book(title, author, pages, isRead) {
 }
 
 function addBookToLibrary() {
-
-        console.log("test")
-      
+        author = document.getElementById('authorInput').value;
+        console.log(author);
+        title = document.getElementById('titleInput').value;
+        pages = document.getElementById('pgNoInput').value;
+        isRead = document.getElementById('completedInput').value;
+        let book1 = new book(title, author, pages, isRead);
+        console.log(book1);
+        return book1;
 }
 
 function deleteBook() {
