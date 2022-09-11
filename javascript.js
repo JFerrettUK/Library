@@ -1,16 +1,11 @@
-let completedCheck = document.querySelector(".bookButton");
-let bookButton = document.querySelector(".bookButton");
-let trashButton = document.querySelector(".trashButton");
-let submitButton = document.querySelector(".submitButton");
-
 function openForm() {
         document.getElementById("myForm").style.display = "grid";
 }
-
 function closeform() {
         document.getElementById("myForm").style.display = "none";
 }
 
+// Stops Submit button from refreshing the page
 
 let myForm = document.getElementById("myForm")
 myForm.addEventListener("submit", (e) => {
@@ -18,28 +13,12 @@ myForm.addEventListener("submit", (e) => {
         e.preventDefault();
 });
 
+// Check if tickbox was clicked
 
-// function book(title, author, pages, isRead) {
-//         bookCard.title = title;
-//         bookCard.author = author;
-//         bookCard.pages = pages;
-//         bookCard.isRead = isRead;
-//         console.log(bookCard)
-//         return bookCard;
-// }
+let isRead = "off";
 
-
+    
 let myLibrary = [];
-
-
-// function book(title, author, pages, isRead) {
-//         bookCard.title = title;
-//         bookCard.author = author;
-//         bookCard.pages = pages;
-//         bookCard.isRead = isRead;
-//         console.log(bookCard);
-//         return bookCard;
-// }
 
 function book(title, author, pages, isRead) {
         this.title = title;
@@ -48,15 +27,23 @@ function book(title, author, pages, isRead) {
         this.isRead = isRead;
 }
 
-function addBookToLibrary() {
-        author = document.getElementById('authorInput').value;
-        console.log(author);
-        title = document.getElementById('titleInput').value;
-        pages = document.getElementById('pgNoInput').value;
-        isRead = document.getElementById('completedInput').value;
-        let book1 = new book(title, author, pages, isRead);
-        console.log(book1);
-        return book1;
+function addBookToLibrary(isRead) {
+        let author = document.getElementById('authorInput').value;
+        let title = document.getElementById('titleInput').value;
+        let pages = document.getElementById('pgNoInput').value;
+        function validate(){
+                var remember = document.getElementById('completedInput');
+                if (remember.checked){
+                        isRead = "on";
+                        return isRead;
+                } else {
+                        isRead = "off";
+                        return isRead;
+                }
+            }
+        validate();
+        let bookTest = new book(title,author, pages, isRead);
+        myLibrary.push(bookTest);
 }
 
 function deleteBook() {
