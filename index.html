@@ -48,7 +48,7 @@
                     </div>
                     <div class="pgNoSection">
                         <label for="pgNo">Number of pages: </label>
-                        <input type="number" name="pgNo" placeholder="Enter number of pages" id="pgNoInput">
+                        <input type="number" name="pgNo" placeholder="Enter number of pages" id="pgNoInput" required>
                     </div>
                     <div class="completeBoxSection">
                         <label for="completeBox">Completed? </label>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="submitContainer">
                         
-                        <input type="submit" value="Submit" class="submitButton" onclick="addBookToLibrary()">
+                        <input type="submit" value="Submit" class="submitButton">
                     </div>
                 </form>
             </div>
@@ -64,7 +64,7 @@
             <!-- HTML for the card insertions below -->
 
             <div class="cards">
-                <div class="card">
+                <div class="card0" id="card0">
                     <div class="cardColumnLeft"></div>
                     <div class="cardcolumnRight">
                         <div class="contentColumnRight">
@@ -77,13 +77,89 @@
                                     <div class="completedBox"></div>
                                 </div>    
                             </div>
-                            <div onclick="deleteBook()" class="lowerColumn">
+                            <div onclick="deleteBook0()" class="lowerColumn">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="trashButton" viewBox="0 0 512 512"><title>Delete</title><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="#143c79" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path stroke="#143c79" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="#143c79" stroke="#143c79" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>                                    
                             </div>
                         </div>
                     </div>
                 </div>
-                
+                <div class="card1" id="card1">
+                    <div class="cardColumnLeft"></div>
+                    <div class="cardcolumnRight">
+                        <div class="contentColumnRight">
+                            <div class="upperColumn">
+                                <div class="bookTitle"><strong>Title</strong>: </div>
+                                <div class="bookAuthor"><strong>Author</strong>: </div>
+                                <div class="pageNumber"><strong>Total pages</strong>: </div>
+                                <div class="completed">
+                                    <div class=completedText><strong>Completed</strong>: </div>
+                                    <div class="completedBox"></div>
+                                </div>    
+                            </div>
+                            <div onclick="deleteBook1()" class="lowerColumn">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="trashButton" viewBox="0 0 512 512"><title>Delete</title><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="#143c79" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path stroke="#143c79" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="#143c79" stroke="#143c79" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card2" id="card2">
+                    <div class="cardColumnLeft"></div>
+                    <div class="cardcolumnRight">
+                        <div class="contentColumnRight">
+                            <div class="upperColumn">
+                                <div class="bookTitle"><strong>Title</strong>: </div>
+                                <div class="bookAuthor"><strong>Author</strong>: </div>
+                                <div class="pageNumber"><strong>Total pages</strong>: </div>
+                                <div class="completed">
+                                    <div class=completedText><strong>Completed</strong>: </div>
+                                    <div class="completedBox"></div>
+                                </div>    
+                            </div>
+                            <div onclick="deleteBook2()" class="lowerColumn">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="trashButton" viewBox="0 0 512 512"><title>Delete</title><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="#143c79" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path stroke="#143c79" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="#143c79" stroke="#143c79" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card3" id="card3">
+                    <div class="cardColumnLeft"></div>
+                    <div class="cardcolumnRight">
+                        <div class="contentColumnRight">
+                            <div class="upperColumn">
+                                <div class="bookTitle"><strong>Title</strong>: </div>
+                                <div class="bookAuthor"><strong>Author</strong>: </div>
+                                <div class="pageNumber"><strong>Total pages</strong>: </div>
+                                <div class="completed">
+                                    <div class=completedText><strong>Completed</strong>: </div>
+                                    <div class="completedBox"></div>
+                                </div>    
+                            </div>
+                            <div onclick="deleteBook3()" class="lowerColumn">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="trashButton" viewBox="0 0 512 512"><title>Delete</title><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="#143c79" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path stroke="#143c79" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="#143c79" stroke="#143c79" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card4" id="card4">
+                    <div class="cardColumnLeft"></div>
+                    <div class="cardcolumnRight">
+                        <div class="contentColumnRight">
+                            <div class="upperColumn">
+                                <div class="bookTitle"><strong>Title</strong>: </div>
+                                <div class="bookAuthor"><strong>Author</strong>: </div>
+                                <div class="pageNumber"><strong>Total pages</strong>: </div>
+                                <div class="completed">
+                                    <div class=completedText><strong>Completed</strong>: </div>
+                                    <div class="completedBox"></div>
+                                </div>    
+                            </div>
+                            <div onclick="deleteBook4()" class="lowerColumn">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="trashButton" viewBox="0 0 512 512"><title>Delete</title><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="#143c79" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path stroke="#143c79" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="#143c79" stroke="#143c79" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
