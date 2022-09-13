@@ -15,6 +15,8 @@ myForm.addEventListener("submit", (e) => {
 // Check if tickbox was clicked, off by default
 let isRead = "off";
 
+let i = 0;
+
 let myLibrary = [];
 
 function book(title, author, pages, isRead) {
@@ -22,6 +24,8 @@ function book(title, author, pages, isRead) {
         this.author = author;
         this.pages = pages;
         this.isRead = isRead;
+        this.cardNo = i;
+        i++;
 }
 
 myForm.addEventListener("submit", (e) => {
@@ -30,7 +34,7 @@ myForm.addEventListener("submit", (e) => {
                 let title = document.getElementById('titleInput').value;
                 let pages = document.getElementById('pgNoInput').value;
                 function validate(){
-                        var remember = document.getElementById('completedInput');
+                        let remember = document.getElementById('completedInput');
                         if (remember.checked){
                                 isRead = "on";
                                 return isRead;
@@ -48,6 +52,46 @@ myForm.addEventListener("submit", (e) => {
         }
         addBookToLibrary(isRead);
 });
+
+function loopMyLibrary(myLibrary) {
+        let libraryNo = 0;
+
+        while (libraryNo < myLibrary.length) {
+                libraryNo++;
+        }
+}
+
+function cardContent0(myLibrary, i) {
+        let bookTitle0 = document.getElementById("bookTitle0");
+        let titleText0 = document.createTextNode("This just got added");
+        bookTitle0.appendChild(titleText0);
+
+        let bookAuthor0 = document.getElementById("bookAuthor0");
+        let authorText0 = document.createTextNode("This just got added");
+        bookAuthor0.appendChild(authorText0);
+
+        let pageNumber0 = document.getElementById("pageNumber0");
+        let pageNoText0 = document.createTextNode("344");
+        pageNumber0.appendChild(pageNoText0);
+
+        function validate(){
+                let remember = document.getElementById('completedInput');
+                if (remember.checked){
+                        document.getElementById("completedBox0").style.backgroundColor = "#143c79";
+                        return isRead;
+                } else {
+                        isRead = "off";
+                        document.getElementById("completedBox0").style.backgroundColor = "lightgrey";
+                }
+        }
+        validate();
+}
+
+if (i === 0) {
+
+}
+
+
 
 function deleteBook0() {
         document.getElementById("card0").style.display = "none";
