@@ -25,8 +25,12 @@ function book(title, author, pages, isRead) {
         this.pages = pages;
         this.isRead = isRead;
         this.cardNo = i;
-        i++;
 }
+
+document.querySelector('#authorInput').value = 'Twain';
+document.querySelector('#titleInput').value = 'Mark';
+document.querySelector('#pgNoInput').value = '233';
+
 
 myForm.addEventListener("submit", (e) => {
         function addBookToLibrary(isRead) {
@@ -48,48 +52,74 @@ myForm.addEventListener("submit", (e) => {
                 myLibrary.push(bookTest);
                 document.querySelector('#authorInput').value = '';
                 document.querySelector('#titleInput').value = '';
-                document.querySelector('#titleInput').value = '';
+                document.querySelector('#pgNoInput').value = '';
         }
         addBookToLibrary(isRead);
 });
 
-function loopMyLibrary(myLibrary) {
-        let libraryNo = 0;
+function loopMyLibrary(myLibrary, i) {
+        console.log(i);
+        myLibrary.forEach((book, i) => {
+                console.log(i);
+                let bookTitle = document.getElementById(`bookTitle${i}`);
+                let titleText = document.createTextNode(book.title);
+                bookTitle.appendChild(titleText);
 
-        while (libraryNo < myLibrary.length) {
-                libraryNo++;
-        }
-}
+                let bookAuthor = document.getElementById(`bookAuthor${i}`);
+                let authorText = document.createTextNode(book.author);
+                bookAuthor.appendChild(authorText);
 
-function cardContent0(myLibrary, i) {
-        let bookTitle0 = document.getElementById("bookTitle0");
-        let titleText0 = document.createTextNode("This just got added");
-        bookTitle0.appendChild(titleText0);
+                let pageNumber = document.getElementById(`pageNumber${i}`);
+                let pageNoText = document.createTextNode(book.pages);
+                pageNumber.appendChild(pageNoText);
 
-        let bookAuthor0 = document.getElementById("bookAuthor0");
-        let authorText0 = document.createTextNode("This just got added");
-        bookAuthor0.appendChild(authorText0);
-
-        let pageNumber0 = document.getElementById("pageNumber0");
-        let pageNoText0 = document.createTextNode("344");
-        pageNumber0.appendChild(pageNoText0);
-
-        function validate(){
-                let remember = document.getElementById('completedInput');
-                if (remember.checked){
-                        document.getElementById("completedBox0").style.backgroundColor = "#143c79";
-                        return isRead;
-                } else {
-                        isRead = "off";
-                        document.getElementById("completedBox0").style.backgroundColor = "lightgrey";
+                function validate(){
+                        let remember = document.getElementById(`completedInput`);
+                        if (remember.checked){
+                                document.getElementById(`completedBox${i}`).style.backgroundColor = "#143c79";
+                                return isRead;
+                        } else {
+                                isRead = "off";
+                                document.getElementById(`completedBox${i}`).style.backgroundColor = "lightgrey";
+                        }
                 }
-        }
-        validate();
+                validate();
+                document.getElementById(`card${i}`).style.display = "grid";
+                i++;
+              })
+              
+
 }
 
-if (i === 0) {
+// function cardContent0(myLibrary, i) {
+//         let bookTitle0 = document.getElementById("bookTitle0");
+//         let titleText0 = document.createTextNode("This just got added");
+//         bookTitle0.appendChild(titleText0);
 
-}
+//         let bookAuthor0 = document.getElementById("bookAuthor0");
+//         let authorText0 = document.createTextNode("This just got added");
+//         bookAuthor0.appendChild(authorText0);
+
+//         let pageNumber0 = document.getElementById("pageNumber0");
+//         let pageNoText0 = document.createTextNode("344");
+//         pageNumber0.appendChild(pageNoText0);
+
+//         function validate(){
+//                 let remember = document.getElementById('completedInput');
+//                 if (remember.checked){
+//                         document.getElementById("completedBox0").style.backgroundColor = "#143c79";
+//                         return isRead;
+//                 } else {
+//                         isRead = "off";
+//                         document.getElementById("completedBox0").style.backgroundColor = "lightgrey";
+//                 }
+//         }
+//         validate();
+// }
+
+// if (i === 0) {
+
+// }
 
 
 

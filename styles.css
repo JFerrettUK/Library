@@ -216,7 +216,7 @@ body, html {
             }
 
             #card0 {
-                display: grid;
+                display: none;
             }
 
             #card1 {
