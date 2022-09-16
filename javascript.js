@@ -52,22 +52,18 @@ function addBookToLibrary(isRead) {
 function loopMyLibrary(myLibrary, i) {
         console.log(i);
         myLibrary.forEach((book, i) => {
-                console.log(i);
-                let bookTitle = document.getElementById(`bookTitle${i}`);
                 let titleText = document.createTextNode(book.title);
-                bookTitle.appendChild(titleText);
+                document.getElementById(`bookTitle${i}`).textContent = titleText.data ;
 
-                let bookAuthor = document.getElementById(`bookAuthor${i}`);
                 let authorText = document.createTextNode(book.author);
-                bookAuthor.appendChild(authorText);
+                document.getElementById(`bookAuthor${i}`).textContent = authorText.data ;
 
-                let pageNumber = document.getElementById(`pageNumber${i}`);
                 let pageNoText = document.createTextNode(book.pages);
-                pageNumber.appendChild(pageNoText);
+                document.getElementById(`pageNumber${i}`).textContent = pageNoText.data ;
 
                 function validate(){
                         let remember = document.getElementById(`completedInput`);
-                        if (remember.checked){
+                        if (remember.checked) {
                                 document.getElementById(`completedBox${i}`).style.backgroundColor = "#143c79";
                                 return isRead;
                         } else {
