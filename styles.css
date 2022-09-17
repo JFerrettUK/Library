@@ -276,11 +276,6 @@ body, html {
                                 border-radius: 5px;
                                 height: 15px;
                                 width: 15px;
-                                background-color: #143c79;
-                            }
-
-                            .completedBox:active {
-                                background-color: #548fd3;
                             }
 
                     .lowerColumn {
