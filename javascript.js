@@ -22,9 +22,9 @@ function book(title, author, pages, isRead) {
         this.cardNo = i;
 }
 
-document.querySelector('#authorInput').value = 'Twain';
-document.querySelector('#titleInput').value = 'Mark';
-document.querySelector('#pgNoInput').value = '233';
+document.querySelector('#authorInput').value = '';
+document.querySelector('#titleInput').value = '';
+document.querySelector('#pgNoInput').value = '';
 
 function addBookToLibrary(isRead) {
         let author = document.getElementById('authorInput').value;
