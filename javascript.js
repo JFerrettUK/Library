@@ -22,10 +22,6 @@ function book(title, author, pages, isRead) {
         this.cardNo = i;
 }
 
-document.querySelector('#authorInput').value = '';
-document.querySelector('#titleInput').value = '';
-document.querySelector('#pgNoInput').value = '';
-
 function addBookToLibrary(isRead) {
         let author = document.getElementById('authorInput').value;
         let title = document.getElementById('titleInput').value;
@@ -50,7 +46,7 @@ function addBookToLibrary(isRead) {
 
 
 function loopMyLibrary(myLibrary, i) {
-        console.log(i);
+
         myLibrary.forEach((book, i) => {
                 let titleText = document.createTextNode(book.title);
                 document.getElementById(`bookTitle${i}`).textContent = titleText.data ;
@@ -96,6 +92,17 @@ function changeStyle(number){
         if (findColor == "rgb(20, 60, 121)") {
                 document.getElementById(`completedBox${number}`).style.backgroundColor = "lightgrey";
         } else {
-        document.getElementById(`completedBox${number}`).style.backgroundColor = "#143c79";
+                document.getElementById(`completedBox${number}`).style.backgroundColor = "#143c79";
         }
+
+        myLibrary.forEach((book, number) => {
+                let findColor = document.getElementById(`completedBox${number}`).style.backgroundColor;        
+                if (findColor == "lightgrey") {
+                        book.isRead = "off";
+                } else {
+                        book.isRead = "on";
+                }
+        })    
 }
+
+
