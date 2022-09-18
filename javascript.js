@@ -61,16 +61,17 @@ function loopMyLibrary(myLibrary, i) {
                 let pageNoText = document.createTextNode(book.pages);
                 document.getElementById(`pageNumber${i}`).textContent = pageNoText.data ;
 
-                function validate(){
-                        let remember = document.getElementById(`completedInput`);
-                        if (remember.checked) {
+                let isReadValue = book.isRead;
+
+                function validate(isReadValue){
+                        if (isReadValue == "on") {
                                 document.getElementById(`completedBox${i}`).style.backgroundColor = "#143c79";
                         } else {
-                                isRead = "off";
                                 document.getElementById(`completedBox${i}`).style.backgroundColor = "lightgrey";
                         }
+                        
                 }
-                validate();
+                validate(isReadValue);
                 function checkDeletion(i) {
                         document.getElementById(`card${i}`).style.display = "grid";  
                 }
