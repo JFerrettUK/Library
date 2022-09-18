@@ -65,7 +65,6 @@ function loopMyLibrary(myLibrary, i) {
                         let remember = document.getElementById(`completedInput`);
                         if (remember.checked) {
                                 document.getElementById(`completedBox${i}`).style.backgroundColor = "#143c79";
-                                return isRead;
                         } else {
                                 isRead = "off";
                                 document.getElementById(`completedBox${i}`).style.backgroundColor = "lightgrey";
@@ -184,4 +183,14 @@ function deleteBook18() {
 function deleteBook19() {
         document.getElementById("card2").style.display = "none";
         myLibrary.splice(19, 1);
+}
+
+
+function changeStyle(){
+        let findColor = document.getElementById(`completedBox0`).style.backgroundColor;        
+        if (findColor == "rgb(20, 60, 121)") {
+                document.getElementById(`completedBox0`).style.backgroundColor = "lightgrey";
+        } else {
+        document.getElementById(`completedBox0`).style.backgroundColor = "#143c79";
+        }
 }
