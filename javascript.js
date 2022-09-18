@@ -86,112 +86,16 @@ myForm.addEventListener("submit", (e) => {
         loopMyLibrary(myLibrary, i)
 });
 
-function deleteBook0() {
-        document.getElementById("card0").style.display = "none";
-        myLibrary.splice(0, 1);
+function deleteBook(numberDel) {
+        document.getElementById(`card${i}`).style.display = "none";
+        myLibrary.splice(`${numberDel}`, 1);
 }
 
-function deleteBook1() {
-        document.getElementById("card1").style.display = "none";
-        myLibrary.splice(1, 1);
-}
-
-function deleteBook2() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(2, 1);
-}
-
-function deleteBook3() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(3, 1);
-}
-
-function deleteBook4() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(4, 1);
-}
-
-function deleteBook5() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(5, 1);
-}
-
-function deleteBook6() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(6, 1);
-}
-
-function deleteBook7() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(7, 1);
-}
-
-function deleteBook8() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(8, 1);
-}
-
-function deleteBook9() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(9, 1);
-}
-
-function deleteBook10() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(10, 1);
-}
-
-function deleteBook11() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(11, 1);
-}
-
-function deleteBook12() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(12, 1);
-}
-
-function deleteBook13() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(13, 1);
-}
-
-function deleteBook14() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(14, 1);
-}
-
-function deleteBook15() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(15, 1);
-}
-
-function deleteBook16() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(16, 1);
-}
-
-function deleteBook17() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(17, 1);
-}
-
-function deleteBook18() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(18, 1);
-}
-
-function deleteBook19() {
-        document.getElementById("card2").style.display = "none";
-        myLibrary.splice(19, 1);
-}
-
-
-function changeStyle(){
-        let findColor = document.getElementById(`completedBox0`).style.backgroundColor;        
+function changeStyle(number){
+        let findColor = document.getElementById(`completedBox${number}`).style.backgroundColor;        
         if (findColor == "rgb(20, 60, 121)") {
-                document.getElementById(`completedBox0`).style.backgroundColor = "lightgrey";
+                document.getElementById(`completedBox${number}`).style.backgroundColor = "lightgrey";
         } else {
-        document.getElementById(`completedBox0`).style.backgroundColor = "#143c79";
+        document.getElementById(`completedBox${number}`).style.backgroundColor = "#143c79";
         }
 }
