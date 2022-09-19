@@ -44,7 +44,6 @@ function addBookToLibrary(isRead) {
         document.querySelector('#pgNoInput').value = '';
 }
 
-
 function loopMyLibrary(myLibrary, i) {
 
         myLibrary.forEach((book, i) => {
@@ -77,18 +76,21 @@ function loopMyLibrary(myLibrary, i) {
               })
 }
 
+// Takes input values and insets them into a relevant card, then makes that card visible
 myForm.addEventListener("submit", (e) => {
         e.preventDefault();
         addBookToLibrary(isRead);
         loopMyLibrary(myLibrary, i);
 });
 
+// Delete book button, using the number of each card's div
 function deleteBook(numberDel) {
         myLibrary.splice(`${numberDel}`, 1);
         document.getElementById(`card${numberDel}`).style.display = "none";  
-        loopMyLibrary(myLibrary);
 }
 
+
+//Changes the Completed? button colour and updates the myLibrary array with the new value
 function changeStyle(number){
         let findColor = document.getElementById(`completedBox${number}`).style.backgroundColor;        
         if (findColor == "rgb(20, 60, 121)") {
