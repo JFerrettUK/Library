@@ -84,8 +84,9 @@ myForm.addEventListener("submit", (e) => {
 });
 
 function deleteBook(numberDel) {
-        document.getElementById(`card${numberDel}`).style.display = "none";  
         myLibrary.splice(`${numberDel}`, 1);
+        document.getElementById(`card${numberDel}`).style.display = "none";  
+        loopMyLibrary(myLibrary);
 }
 
 function changeStyle(number){
