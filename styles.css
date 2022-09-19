@@ -207,7 +207,7 @@ body, html {
             font-size: 11px;
         }
 
-            #card0, .card1, .card2, .card3, #card4 {
+            .card0, .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17, .card18, .card19 {
                 height: 140px;
                 background-color: #ffffff;
                 box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -231,7 +231,67 @@ body, html {
                 display: none;
             }
 
-            .card4 {
+            #card4 {
+                display: none;
+            }
+
+            #card5 {
+                display: none;
+            }
+
+            #card6 {
+                display: none;
+            }
+
+            #card7 {
+                display: none;
+            }
+
+            #card8 {
+                display: none;
+            }
+
+            #card9 {
+                display: none;
+            }
+
+            #card10 {
+                display: none;
+            }
+
+            #card11 {
+                display: none;
+            }
+
+            #card12 {
+                display: none;
+            }
+
+            #card13 {
+                display: none;
+            }
+
+            #card14 {
+                display: none;
+            }
+
+            #card15 {
+                display: none;
+            }
+
+            #card16 {
+                display: none;
+            }
+
+            #card17 {
+                display: none;
+            }
+
+            #card18 {
+                display: none;
+            }
+
+            #card19 {
                 display: none;
             }
 

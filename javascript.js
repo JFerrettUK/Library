@@ -73,17 +73,18 @@ function loopMyLibrary(myLibrary, i) {
                 }
                 checkDeletion(i);
                 i++;
+                console.log(myLibrary);
               })
 }
 
 myForm.addEventListener("submit", (e) => {
         e.preventDefault();
         addBookToLibrary(isRead);
-        loopMyLibrary(myLibrary, i)
+        loopMyLibrary(myLibrary, i);
 });
 
 function deleteBook(numberDel) {
-        document.getElementById(`card${i}`).style.display = "none";
+        document.getElementById(`card${numberDel}`).style.display = "none";  
         myLibrary.splice(`${numberDel}`, 1);
 }
 
