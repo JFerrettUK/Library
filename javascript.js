@@ -67,14 +67,56 @@ function loopMyLibrary(myLibrary, i) {
                         
                 }
                 validate(isReadValue);
-                function checkDeletion(i) {
-                        document.getElementById(`card${i}`).style.display = "grid";  
-                }
-                checkDeletion(i);
+                document.getElementById(`card${i}`).style.display = "grid";  
                 i++;
-                console.log(myLibrary);
               })
 }
+
+// let nextDigit = 0;
+// let nextDigit2 = 0;
+
+// let length = myLibrary.length;
+
+// function checkLength() {
+//         length = myLibrary.length;
+// }
+
+// function getLength() {
+//         if (length == 0) {
+//                 nextDigit = 1;
+//                 nextDigit2 = 2;
+//         } else if (length == 1) {
+//                 nextDigit = 2;
+//                 nextDigit2 = 3;
+//         } else if (length == 2) {
+//                 nextDigit = 3;
+//                 nextDigit2 = 4;
+//         } else if (length == 3) {
+//                 nextDigit = 4;
+//                 nextDigit2 = 5;
+//         } else if (length == 4) {
+//                 nextDigit = 5;
+//                 nextDigit2 = 6;
+//         } else if (length == 5) {
+//                 nextDigit = 6;
+//                 nextDigit2 = 7;
+//         }
+// }
+
+// function deleteExtraCards() {
+//         value1 = nextDigit;
+//         value2 = nextDigit2;
+//         console.log(value1);
+//         document.getElementById(`card${value1}`).style.display = "none";  
+//         document.getElementById(`card${value2}`).style.display = "none";  
+// }
+
+// function deleteExtra() {
+//         checkLength()
+//         getLength()
+//         deleteExtraCards();
+// }
+
 
 // Takes input values and insets them into a relevant card, then makes that card visible
 myForm.addEventListener("submit", (e) => {
