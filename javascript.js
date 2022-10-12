@@ -1,7 +1,7 @@
 function openForm() {
         document.getElementById("myForm").style.display = "grid";
 }
-function closeform() {
+function closeForm() {
         document.getElementById("myForm").style.display = "none";
 }
 
@@ -83,13 +83,9 @@ function loopMyLibrary(myLibrary, i) {
 
 // Takes input values and insets them into a relevant card, then makes that card visible
 myForm.addEventListener("submit", (e) => {
-        console.log(myLibrary, "before")
         e.preventDefault();
-        console.log(myLibrary, "deleteAdd")
         deleteAdditions();
-        console.log(myLibrary, "resetCard")
         resetCardHidden();
-        console.log(myLibrary, "addBook")
         addBookToLibrary(isRead);
         loopMyLibrary(myLibrary, i);
 });
@@ -341,3 +337,178 @@ function changeStyle(number){
 }
 
 
+//replace onclick for delete
+
+document.getElementById("delete0").addEventListener("click", function(){
+        deleteBook(0);
+});
+     
+document.getElementById("delete1").addEventListener("click", function(){
+        deleteBook(1);
+});
+
+document.getElementById("delete2").addEventListener("click", function(){
+        deleteBook(2);
+});
+
+document.getElementById("delete3").addEventListener("click", function(){
+        deleteBook(3);
+});
+
+document.getElementById("delete4").addEventListener("click", function(){
+        deleteBook(4);
+});
+
+document.getElementById("delete5").addEventListener("click", function(){
+        deleteBook(5);
+});
+
+document.getElementById("delete6").addEventListener("click", function(){
+        deleteBook(6);
+});
+
+document.getElementById("delete7").addEventListener("click", function(){
+        deleteBook(7);
+});
+
+document.getElementById("delete8").addEventListener("click", function(){
+        deleteBook(8);
+});
+
+document.getElementById("delete9").addEventListener("click", function(){
+        deleteBook(9);
+});
+     
+document.getElementById("delete10").addEventListener("click", function(){
+        deleteBook(10);
+});
+
+document.getElementById("delete11").addEventListener("click", function(){
+        deleteBook(11);
+});
+
+document.getElementById("delete12").addEventListener("click", function(){
+        deleteBook(12);
+});
+        
+document.getElementById("delete13").addEventListener("click", function(){
+        deleteBook(13);
+});
+
+document.getElementById("delete14").addEventListener("click", function(){
+        deleteBook(14);
+});
+
+document.getElementById("delete15").addEventListener("click", function(){
+        deleteBook(15);
+});
+
+document.getElementById("delete16").addEventListener("click", function(){
+        deleteBook(16);
+});
+
+document.getElementById("delete17").addEventListener("click", function(){
+        deleteBook(17);
+});
+
+document.getElementById("delete18").addEventListener("click", function(){
+gameboard.playGame(18);
+});
+
+document.getElementById("delete19").addEventListener("click", function(){
+        deleteBook(19);
+});
+        
+//changeStyle event listeners
+
+document.getElementById("completedBox0").addEventListener("click", function(){
+        changeStyle(0);
+});
+     
+document.getElementById("completedBox1").addEventListener("click", function(){
+        changeStyle(1);
+});
+
+document.getElementById("completedBox2").addEventListener("click", function(){
+        changeStyle(2);
+});
+
+document.getElementById("completedBox3").addEventListener("click", function(){
+        changeStyle(3);
+});
+
+document.getElementById("completedBox4").addEventListener("click", function(){
+        changeStyle(4);
+});
+
+document.getElementById("completedBox5").addEventListener("click", function(){
+        changeStyle(5);
+});
+
+document.getElementById("completedBox6").addEventListener("click", function(){
+        changeStyle(6);
+});
+
+document.getElementById("completedBox7").addEventListener("click", function(){
+        changeStyle(7);
+});
+
+document.getElementById("completedBox8").addEventListener("click", function(){
+        changeStyle(8);
+});
+
+document.getElementById("completedBox9").addEventListener("click", function(){
+        changeStyle(9);
+});
+     
+document.getElementById("completedBox10").addEventListener("click", function(){
+        changeStyle(10);
+});
+
+document.getElementById("completedBox11").addEventListener("click", function(){
+        changeStyle(11);
+});
+
+document.getElementById("completedBox12").addEventListener("click", function(){
+        changeStyle(12);
+});
+        
+document.getElementById("completedBox13").addEventListener("click", function(){
+        changeStyle(13);
+});
+
+document.getElementById("completedBox14").addEventListener("click", function(){
+        changeStyle(14);
+});
+
+document.getElementById("completedBox15").addEventListener("click", function(){
+        changeStyle(15);
+});
+
+document.getElementById("completedBox16").addEventListener("click", function(){
+        changeStyle(16);
+});
+
+document.getElementById("completedBox17").addEventListener("click", function(){
+        changeStyle(17);
+});
+
+document.getElementById("completedBox18").addEventListener("click", function(){
+        changeStyle(18)
+});
+
+document.getElementById("completedBox19").addEventListener("click", function(){
+        changeStyle(19);
+});
+
+//open form event listener
+
+document.getElementById("bookButton").addEventListener("click", function(){
+        openForm();
+});
+
+//close form event listener
+
+document.getElementById("closeButton").addEventListener("click", function(){
+        closeForm();
+});
