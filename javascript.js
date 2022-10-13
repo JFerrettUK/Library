@@ -1,11 +1,13 @@
+
+let myForm = document.getElementById("myForm")
+
+
 function openForm() {
         document.getElementById("myForm").style.display = "grid";
 }
 function closeForm() {
         document.getElementById("myForm").style.display = "none";
 }
-
-let myForm = document.getElementById("myForm")
 
 // Check if tickbox was clicked, off by default
 let isRead = "off";
@@ -22,12 +24,13 @@ function resetCardHidden() {
 }
 
 
-function book(title, author, pages, isRead) {
+class Book {
+        constructor(title, author, pages, isRead) {
         this.title = title;
         this.author = author;
         this.pages = pages;
         this.isRead = isRead;
-        this.cardNo = i;
+        }
 }
 
 function addBookToLibrary(isRead) {
@@ -45,7 +48,7 @@ function addBookToLibrary(isRead) {
                 }
         }
         validate();
-        let bookTest = new book(title,author, pages, isRead);
+        let bookTest = new Book(title,author, pages, isRead);
         myLibrary.push(bookTest);
         document.querySelector('#authorInput').value = '';
         document.querySelector('#titleInput').value = '';
